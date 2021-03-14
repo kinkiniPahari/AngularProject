@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8" /> 
+       <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <!-- <link rel="stylesheet" href="../css/employeeCard.css"> -->
+    </head>
+    <body>
+    <div class="mark">
+        <div>
+            <p>Total of <span id="dynamic">{{countryList.total}}</span> employees</p>
+        </div>
+        <section>
+            <p-table [value]="[[]]" [paginator]="true" [rows]="2">
+              <ng-template pTemplate="header" let-columns>
+              </ng-template>
+              <ng-template pTemplate="body" let-rowData let-columns="columns">
+                <tr class="pad" *ngFor="let grp of group; let i = index">
+                     <td *ngFor="let item of group[i]" (click)="gotoDetails(item)">
+                      
+                        <div class="img" >
+                    <img src="{{item.avatar}}" width="150" height="150"> 
+                    <section class="name">
+                        <span id="details">{{item.first_name}} {{item.lastName}}</span>
+                    </section>
+                    </div>
+                  
+                     </td>
+                </tr>
+              </ng-template>
+              </p-table>
+        </section>
+        <div class="page">
+          <section class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&raquo;</a>
+          </section>
+        </div>
+    </div>
+    </body>
+</html>
+<!-- <div style="text-align: center;">
+  <div *ngFor="let item of emplist">
+    <li>
+      <h2> items:
+        {{item.id}}
+      </h2>
+    </li>
+</div>
+</div> -->
+<router-outlet></router-outlet>

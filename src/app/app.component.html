@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8" /> 
+        <title>Employee Page</title>
+        <link rel = "icon" href =  
+         "../assets/icon.jpg"
+                type = "image/x-icon">
+         <!-- <link rel="stylesheet" href="../assets/scss/employee.css">  -->
+        <!-- <link rel="stylesheet" href="../assets/scss/font.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="pageHeader">
+        <header>
+        <h2 class="topHeader">Employee Page</h2>
+        <img id="logo" src="../assets/metrixlab-logo (1).jpg" width="170" height="50">
+        </header>
+    
+        <section class="ui-navbar">
+             <span id="workforce">Workforce</span>
+            <!--<button id="empButton" class="btn">Employees</button>
+            <button id="addButton" class="btn">Add Employee</button> -->
+            <ul>
+            <li routerLinkActive = "active">
+                <a [routerLink] = "['/employeesummary']" id="empButton" (click) = "routerLink($event)">Employees</a>
+            </li>
+            <li routerLinkActive = "active">
+                <a [routerLink] = "['/addemployee']" id="addButton" (click) = "routerLink($event)">Add Employees</a>
+            </li>
+            </ul>
+        </section>
+        </div>
+    </body>
+</html>
+<router-outlet></router-outlet> 

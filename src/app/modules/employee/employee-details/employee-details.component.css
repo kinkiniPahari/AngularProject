@@ -1,0 +1,8 @@
+div{
+    display: flex;
+    flex-direction: row;
+}
+#üi-details{
+    padding-top: 5em;
+    padding-left: 5em;
+}
